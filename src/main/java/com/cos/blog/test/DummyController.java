@@ -84,7 +84,7 @@ public class DummyController {
 		User user =userRepository.findById(id).orElseThrow(new Supplier<IllegalArgumentException>() {
 			@Override
 			public IllegalArgumentException get() {
-				return new IllegalArgumentException("해당 유저는 없습니다. id :"+id);
+				return new IllegalArgumentException("해당 사용자가 없습니다");
 			}
 		});
 		// 요청은 웹 브라우져 
