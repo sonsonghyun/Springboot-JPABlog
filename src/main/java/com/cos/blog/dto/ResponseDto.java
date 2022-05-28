@@ -7,8 +7,8 @@ import lombok.NoArgsConstructor;
 
 //응답용
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Builder
 public class ResponseDto<T> {
 	int status;

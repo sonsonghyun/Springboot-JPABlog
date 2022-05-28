@@ -1,5 +1,7 @@
 package com.cos.blog.repository;
 
+import java.util.Optional;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.cos.blog.model.User;
@@ -8,10 +10,10 @@ import com.cos.blog.model.User;
 // CRUD가 이 함수로 다 가능
 // 자동으로 bean 등록이 된다
 // @Repository > 생략가능
-public interface UserRepository extends JpaRepository<User, Integer>{ 
-	
+public interface UserRepository extends JpaRepository<User, Integer>{
+	// SELECT * FROM user WHERE username = 1?;
+	Optional<User> findByUsername(String username);
 }
-
 
 //User 테이블의 Pk는 integer이다
 	// JPA Naming 쿼리전략
